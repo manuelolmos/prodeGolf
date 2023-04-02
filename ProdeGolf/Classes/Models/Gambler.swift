@@ -11,10 +11,12 @@ class Gambler: NSObject {
     let name: String
     let wishPicks: [[String]]
     var picks: [String]
+    let draftPositions: [Int]
     
-    init(name: String, wishPicks: [[String]], picks: [String] = []) {
+    init(name: String, wishPicks: [[String]], draftPositions: [Int], picks: [String] = []) {
         self.name = name
         self.wishPicks = wishPicks
+        self.draftPositions = draftPositions
         self.picks = picks
     }
 }

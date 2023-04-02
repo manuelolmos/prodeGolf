@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let prode = Prode()
-        prode.procesar()
+        prode.process()
     }
 
 

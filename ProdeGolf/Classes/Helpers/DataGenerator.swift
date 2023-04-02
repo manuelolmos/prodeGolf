@@ -9,6 +9,13 @@ import Foundation
 
 struct DataGenerator {
 
+    private let ranking = [
+        ["Rory", "Scottie", "Rahm", "Morikawa", "Hovland"],
+        ["Homa", "Finau", "Burns", "Day", "Rose"],
+        ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
+        ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"]
+    ]
+
     func generateGamblers() -> [Gambler] {
         return [
             Gambler(
@@ -18,7 +25,8 @@ struct DataGenerator {
                     ["Homa", "Finau", "Burns", "Day", "Rose"],
                     ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
                     ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"]
-                ]
+                ],
+                draftPositions: [0, 2, 1, 0]
             ),
             Gambler(
                 name: "Pedro",
@@ -27,7 +35,8 @@ struct DataGenerator {
                     ["Homa", "Finau", "Burns", "Day", "Rose"],
                     ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
                     ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"]
-                ]
+                ],
+                draftPositions: [1, 0, 2, 1]
             ),
             Gambler(
                 name: "Chacho",
@@ -36,29 +45,20 @@ struct DataGenerator {
                     ["Homa", "Finau", "Burns", "Day", "Rose"],
                     ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
                     ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"]
-                ]
+                ],
+                draftPositions: [2, 1, 0, 2]
             )
         ]
     }
 
     func generateDraft(gamblers: [Gambler]) -> [BucketSelection] {
-        return [
-            BucketSelection(
-                golfers: ["Rory", "Scottie", "Rahm", "Morikawa", "Hovland"],
-                gamblers: [gamblers[0], gamblers[1], gamblers[2]]
-            ),
-            BucketSelection(
-                golfers: ["Homa", "Finau", "Burns", "Day", "Rose"],
-                gamblers: [gamblers[1], gamblers[2], gamblers[0]]
-            ),
-            BucketSelection(
-                golfers: ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
-                gamblers: [gamblers[2], gamblers[0], gamblers[1]]
-            ),
-            BucketSelection(
-                golfers: ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"],
-                gamblers: [gamblers[0], gamblers[1], gamblers[2]]
-            )
-        ]
+        var draftData = [BucketSelection]()
+        for bucketNumber in 0...(ranking.count-1) {
+            let sortedGamblers = gamblers.sorted { lhsGambler, rhsGambler in
+                lhsGambler.draftPositions[bucketNumber] < rhsGambler.draftPositions[bucketNumber]
+            }
+            draftData.append(BucketSelection(golfers: ranking[bucketNumber], gamblers: sortedGamblers))
+        }
+        return draftData
     }
 }
