@@ -9,7 +9,7 @@ import Foundation
 
 class Prode: NSObject {
 
-    private var gamblers: [Gambler]
+    var gamblers: [Gambler]
     private let draft: [BucketSelection]
 
     override init() {
