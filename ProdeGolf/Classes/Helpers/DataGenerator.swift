@@ -9,7 +9,7 @@ import Foundation
 
 struct DataGenerator {
 
-    private let ranking = [
+    let ranking = [
         ["Scottie Scheffler", "Rory McIlroy", "Jon Rahm", "Patrick Cantlay", "Max Homa", "Xander Schauffele", "Will Zalatoris", "Viktor Hovland", "Sam Burns", "Justin Thomas"],
         ["Collin Morikawa", "Tony Finau", "Cameron Young", "Matt Fitzpatrick", "Jordan Spieth", "Tyrrell Hatton", "Sungjae Im", "Tom Kim", "Kurt Kitayama", "Hideki Matsuyama"],
         ["Keegan Bradley", "Shane Lowry", "Billy Horschel", "Tom Hoge", "Tommy Fleetwood", "Brian Harman", "Sahith Theegala", "Justin Rose", "Sepp Straka", "Jason Day", "Chris Kirk", "Seamus Power", "Ryan Fox", "Russell Henley", "Adam Scott", "Si Woo Kim", "Corey Conners", "Kyoung-Hoon Lee", "Alexander Noren", "Harris English"],
