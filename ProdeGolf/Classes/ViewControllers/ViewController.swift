@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let prode = Prode()
         prode.process()
+        prode.showPicks()
     }
 }
 

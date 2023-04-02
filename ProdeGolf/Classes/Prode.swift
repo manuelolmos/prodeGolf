@@ -35,7 +35,9 @@ class Prode: NSObject {
                 }
             }
         }
+    }
 
+    func showPicks() {
         for gambler in gamblers {
             print("Gambler: \(gambler.name) has the following picks: \(gambler.picks)")
         }
