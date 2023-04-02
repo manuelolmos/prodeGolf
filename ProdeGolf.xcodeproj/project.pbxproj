@@ -10,7 +10,7 @@
 		AFB290E929D92523004C66D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB290E429D92523004C66D7 /* Assets.xcassets */; };
 		AFB290EA29D92523004C66D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB290E529D92523004C66D7 /* LaunchScreen.storyboard */; };
 		AFB290EB29D92523004C66D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB290E729D92523004C66D7 /* Main.storyboard */; };
-		AFB290F429D92535004C66D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB290EF29D92535004C66D7 /* ViewController.swift */; };
+		AFB290F429D92535004C66D7 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB290EF29D92535004C66D7 /* RankingViewController.swift */; };
 		AFB290F529D92535004C66D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB290F129D92535004C66D7 /* AppDelegate.swift */; };
 		AFB290F629D92535004C66D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB290F229D92535004C66D7 /* SceneDelegate.swift */; };
 		AFB290FE29D92575004C66D7 /* BucketSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB290FD29D92575004C66D7 /* BucketSelection.swift */; };
@@ -25,7 +25,7 @@
 		AFB290E429D92523004C66D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB290E629D92523004C66D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFB290E829D92523004C66D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFB290EF29D92535004C66D7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFB290EF29D92535004C66D7 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		AFB290F129D92535004C66D7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB290F229D92535004C66D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AFB290FD29D92575004C66D7 /* BucketSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketSelection.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		AFB290EE29D92535004C66D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFB290EF29D92535004C66D7 /* ViewController.swift */,
+				AFB290EF29D92535004C66D7 /* RankingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 				AFB2910029D92593004C66D7 /* Gambler.swift in Sources */,
 				AFB290F529D92535004C66D7 /* AppDelegate.swift in Sources */,
 				AFB290FE29D92575004C66D7 /* BucketSelection.swift in Sources */,
-				AFB290F429D92535004C66D7 /* ViewController.swift in Sources */,
+				AFB290F429D92535004C66D7 /* RankingViewController.swift in Sources */,
 				AFB2910229D925A8004C66D7 /* DataGenerator.swift in Sources */,
 				AFB290F629D92535004C66D7 /* SceneDelegate.swift in Sources */,
 			);
