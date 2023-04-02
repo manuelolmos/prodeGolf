@@ -22,32 +22,35 @@ struct DataGenerator {
             Gambler(
                 name: "Pipe",
                 wishPicks: [
-                    ["Rory", "Scottie", "Rahm", "Morikawa", "Hovland"],
-                    ["Homa", "Finau", "Burns", "Day", "Rose"],
-                    ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
-                    ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"]
+                    ["Rory McIlroy", "Scottie Scheffler", "Jon Rahm"],
+                    ["Tony Finau", "Kurt Kitayama", "Tom Kim"],
+                    ["Tommy Fleetwood"],
+                    ["Kevin Kisner", "Cameron Champ"],
+                    ["Dustin Johnson"]
                 ],
-                draftPositions: [0, 2, 1, 0]
+                draftPositions: [0, 2, 1, 0, 2]
             ),
             Gambler(
                 name: "Pedro",
                 wishPicks: [
-                    ["Rory", "Scottie", "Rahm", "Morikawa", "Hovland"],
-                    ["Homa", "Finau", "Burns", "Day", "Rose"],
-                    ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
-                    ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"]
+                    ["Rory McIlroy", "Scottie Scheffler", "Jon Rahm"],
+                    ["Tony Finau", "Kurt Kitayama", "Tom Kim"],
+                    ["Tommy Fleetwood"],
+                    ["Kevin Kisner", "Cameron Champ"],
+                    ["Dustin Johnson"]
                 ],
-                draftPositions: [1, 0, 2, 1]
+                draftPositions: [1, 0, 2, 1, 0]
             ),
             Gambler(
                 name: "Chacho",
                 wishPicks: [
-                    ["Rory", "Scottie", "Rahm", "Morikawa", "Hovland"],
-                    ["Homa", "Finau", "Burns", "Day", "Rose"],
-                    ["Thomas", "Cantlay", "Xander", "Fowler", "Young"],
-                    ["Speith", "T. Kim", "S.W Kim", "Kuchar", "Woods"]
+                    ["Rory McIlroy", "Scottie Scheffler", "Jon Rahm"],
+                    ["Tony Finau", "Kurt Kitayama", "Tom Kim"],
+                    ["Tommy Fleetwood"],
+                    ["Kevin Kisner", "Cameron Champ"],
+                    ["Dustin Johnson"]
                 ],
-                draftPositions: [2, 1, 0, 2]
+                draftPositions: [2, 1, 0, 2, 1]
             )
         ]
     }

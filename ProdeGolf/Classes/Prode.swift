@@ -22,17 +22,16 @@ class Prode: NSObject {
         for (index, bucket) in draft.enumerated() {
             var golfersToPick = bucket.golfers
             for gambler in bucket.gamblers {
+                var golferPicked = false
                 for golfer in gambler.wishPicks[index] {
                     if golfersToPick.contains(golfer) {
-                        gamblers = gamblers.map {
-                            if $0.name == gambler.name {
-                                $0.picks.append(golfer)
-                            }
-                            return $0
-                        }
-                        golfersToPick = golfersToPick.filter { $0 != golfer }
+                        golfersToPick = pick(golfer: golfer, from: golfersToPick, for: gambler)
+                        golferPicked = true
                         break
                     }
+                }
+                if !golferPicked, let nextGolfer = golfersToPick.first {
+                    golfersToPick = pick(golfer: nextGolfer, from: golfersToPick, for: gambler)
                 }
             }
         }
@@ -40,5 +39,15 @@ class Prode: NSObject {
         for gambler in gamblers {
             print("Gambler: \(gambler.name) has the following picks: \(gambler.picks)")
         }
+    }
+
+    private func pick(golfer: String, from golfersToPick: [String], for gambler: Gambler) -> [String] {
+        gamblers = gamblers.map {
+            if $0.name == gambler.name {
+                $0.picks.append(golfer)
+            }
+            return $0
+        }
+        return golfersToPick.filter { $0 != golfer }
     }
 }
