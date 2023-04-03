@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Gambler: NSObject {
+class Gambler: NSObject, Codable {
     let name: String
     let wishPicks: [[String]]
     var picks: [String]

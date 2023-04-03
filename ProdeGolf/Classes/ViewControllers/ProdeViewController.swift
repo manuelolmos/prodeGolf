@@ -9,11 +9,45 @@ import UIKit
 
 class ProdeViewController: UIViewController {
 
+    enum Constants: String {
+        case draftDone = "DraftDone"
+        case gamblers = "Gamblers"
+    }
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var draftButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
-    private var gamblers: [Gambler] = []
-    private var draftDone = false
+    private var gamblers: [Gambler] = [] {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(gamblers) {
+                UserDefaults.standard.set(encoded, forKey: Constants.gamblers.rawValue)
+            }
+        }
+    }
+    private var draftDone = false {
+        didSet {
+            UserDefaults.standard.set(draftDone, forKey: Constants.draftDone.rawValue)
+        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        restoreData()
+        setupViews()
+    }
+
+    private func setupViews() {
+        if let gamblers = UserDefaults.standard.object(forKey: Constants.gamblers.rawValue) as? Data {
+            self.gamblers = (try? JSONDecoder().decode(Array<Gambler>.self, from: gamblers)) ?? []
+        }
+        draftButton.isEnabled = !draftDone
+        addButton.isEnabled = !draftDone
+        tableView.reloadData()
+    }
+
+    private func restoreData() {
+        draftDone = UserDefaults.standard.object(forKey: Constants.draftDone.rawValue) as? Bool ?? false
+    }
 
     @IBAction func proceedToDraftTUI(_ sender: Any) {
         if gamblers.isEmpty {
@@ -22,9 +56,7 @@ class ProdeViewController: UIViewController {
         let prode = Prode(gamblers: gamblers)
         prode.process()
         draftDone = true
-        draftButton.isEnabled = !draftDone
-        addButton.isEnabled = !draftDone
-        tableView.reloadData()
+        setupViews()
     }
 
     @IBAction func createGambler(_ sender: Any) {
