@@ -17,6 +17,10 @@
 		AFB2910029D92593004C66D7 /* Gambler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB290FF29D92593004C66D7 /* Gambler.swift */; };
 		AFB2910229D925A8004C66D7 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2910129D925A8004C66D7 /* DataGenerator.swift */; };
 		AFB2910429D925C1004C66D7 /* Prode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2910329D925C1004C66D7 /* Prode.swift */; };
+		AFB2910629DA2D97004C66D7 /* ProdeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2910529DA2D97004C66D7 /* ProdeViewController.swift */; };
+		AFB2910829DA33F9004C66D7 /* CreateGamblerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2910729DA33F9004C66D7 /* CreateGamblerViewController.swift */; };
+		AFB2910A29DA3C7C004C66D7 /* BucketSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2910929DA3C7C004C66D7 /* BucketSelectionViewController.swift */; };
+		AFB2910C29DA427E004C66D7 /* DetailGamblerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2910B29DA427E004C66D7 /* DetailGamblerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		AFB290FF29D92593004C66D7 /* Gambler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gambler.swift; sourceTree = "<group>"; };
 		AFB2910129D925A8004C66D7 /* DataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		AFB2910329D925C1004C66D7 /* Prode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prode.swift; sourceTree = "<group>"; };
+		AFB2910529DA2D97004C66D7 /* ProdeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdeViewController.swift; sourceTree = "<group>"; };
+		AFB2910729DA33F9004C66D7 /* CreateGamblerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGamblerViewController.swift; sourceTree = "<group>"; };
+		AFB2910929DA3C7C004C66D7 /* BucketSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketSelectionViewController.swift; sourceTree = "<group>"; };
+		AFB2910B29DA427E004C66D7 /* DetailGamblerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGamblerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				AFB290EF29D92535004C66D7 /* RankingViewController.swift */,
+				AFB2910529DA2D97004C66D7 /* ProdeViewController.swift */,
+				AFB2910729DA33F9004C66D7 /* CreateGamblerViewController.swift */,
+				AFB2910929DA3C7C004C66D7 /* BucketSelectionViewController.swift */,
+				AFB2910B29DA427E004C66D7 /* DetailGamblerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,9 +213,13 @@
 				AFB2910429D925C1004C66D7 /* Prode.swift in Sources */,
 				AFB2910029D92593004C66D7 /* Gambler.swift in Sources */,
 				AFB290F529D92535004C66D7 /* AppDelegate.swift in Sources */,
+				AFB2910A29DA3C7C004C66D7 /* BucketSelectionViewController.swift in Sources */,
 				AFB290FE29D92575004C66D7 /* BucketSelection.swift in Sources */,
+				AFB2910829DA33F9004C66D7 /* CreateGamblerViewController.swift in Sources */,
 				AFB290F429D92535004C66D7 /* RankingViewController.swift in Sources */,
+				AFB2910629DA2D97004C66D7 /* ProdeViewController.swift in Sources */,
 				AFB2910229D925A8004C66D7 /* DataGenerator.swift in Sources */,
+				AFB2910C29DA427E004C66D7 /* DetailGamblerViewController.swift in Sources */,
 				AFB290F629D92535004C66D7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

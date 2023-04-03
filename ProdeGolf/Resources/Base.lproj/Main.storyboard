@@ -11,7 +11,7 @@
         <!--Ranking-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProdeGolf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RankingViewController" customModule="ProdeGolf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,384 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="908" y="265"/>
+        </scene>
+        <!--Detail Gambler View Controller-->
+        <scene sceneID="WcB-j6-RiH">
+            <objects>
+                <viewController storyboardIdentifier="DetailGamblerViewController" id="P3W-af-skv" customClass="DetailGamblerViewController" customModule="ProdeGolf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNw-ln-Lgu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM6-PH-UHK">
+                                <rect key="frame" x="12" y="118.99999999999999" width="369" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sEX-ax-LMk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hM6-PH-UHK" firstAttribute="leading" secondItem="sEX-ax-LMk" secondAttribute="leading" constant="12" id="exX-6n-V5e"/>
+                            <constraint firstItem="sEX-ax-LMk" firstAttribute="trailing" secondItem="hM6-PH-UHK" secondAttribute="trailing" constant="12" id="vJp-aW-2e3"/>
+                            <constraint firstItem="hM6-PH-UHK" firstAttribute="top" secondItem="sEX-ax-LMk" secondAttribute="top" constant="60" id="xyR-oN-EVL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gamblerLabel" destination="hM6-PH-UHK" id="zPp-ql-uop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fdq-dK-TrH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1526" y="287"/>
+        </scene>
+        <!--Prode-->
+        <scene sceneID="5m8-uq-x2n">
+            <objects>
+                <viewController id="hoR-0k-nfd" customClass="ProdeViewController" customModule="ProdeGolf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S76-vZ-mcn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqZ-f6-quL">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWt-uC-cgK">
+                                        <rect key="frame" x="11.999999999999996" y="4.6666666666666643" width="62.666666666666657" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Draft"/>
+                                        <connections>
+                                            <action selector="proceedToDraftTUI:" destination="hoR-0k-nfd" eventType="touchUpInside" id="K8O-H8-6gq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKr-zl-lAp">
+                                        <rect key="frame" x="173.66666666666666" y="11.666666666666671" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9D-1k-Ynm">
+                                        <rect key="frame" x="351" y="7" width="30" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="createGambler:" destination="hoR-0k-nfd" eventType="touchUpInside" id="cZW-Pw-k3C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="HKr-zl-lAp" firstAttribute="centerY" secondItem="HqZ-f6-quL" secondAttribute="centerY" id="1CA-Ux-eYh"/>
+                                    <constraint firstAttribute="trailing" secondItem="C9D-1k-Ynm" secondAttribute="trailing" constant="12" id="Bv1-P8-RgI"/>
+                                    <constraint firstItem="HKr-zl-lAp" firstAttribute="centerX" secondItem="HqZ-f6-quL" secondAttribute="centerX" id="FxF-Tg-M5V"/>
+                                    <constraint firstItem="HKr-zl-lAp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XWt-uC-cgK" secondAttribute="trailing" id="PNj-HR-eWN"/>
+                                    <constraint firstItem="C9D-1k-Ynm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HKr-zl-lAp" secondAttribute="trailing" id="VR3-ei-FFL"/>
+                                    <constraint firstItem="XWt-uC-cgK" firstAttribute="leading" secondItem="HqZ-f6-quL" secondAttribute="leading" constant="12" id="fyG-Ff-GkA"/>
+                                    <constraint firstItem="XWt-uC-cgK" firstAttribute="centerY" secondItem="HqZ-f6-quL" secondAttribute="centerY" id="gTa-Vc-wqQ"/>
+                                    <constraint firstItem="C9D-1k-Ynm" firstAttribute="centerY" secondItem="HqZ-f6-quL" secondAttribute="centerY" id="nrv-82-5yz"/>
+                                    <constraint firstAttribute="height" constant="44" id="wYS-eN-NVU"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R1A-az-Afv">
+                                <rect key="frame" x="0.0" y="103" width="393" height="617"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GamblerCell" id="Ovc-hb-PAY">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ovc-hb-PAY" id="6YJ-sU-S88">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hoR-0k-nfd" id="TSx-YC-V2b"/>
+                                    <outlet property="delegate" destination="hoR-0k-nfd" id="aeI-Se-0vw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u1g-MT-T7a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u1g-MT-T7a" firstAttribute="trailing" secondItem="R1A-az-Afv" secondAttribute="trailing" id="CuW-57-gAX"/>
+                            <constraint firstItem="u1g-MT-T7a" firstAttribute="trailing" secondItem="HqZ-f6-quL" secondAttribute="trailing" id="NAf-Og-56X"/>
+                            <constraint firstItem="u1g-MT-T7a" firstAttribute="bottom" secondItem="R1A-az-Afv" secondAttribute="bottom" id="Ref-WO-6Yk"/>
+                            <constraint firstItem="R1A-az-Afv" firstAttribute="top" secondItem="HqZ-f6-quL" secondAttribute="bottom" id="SUs-gR-arj"/>
+                            <constraint firstItem="HqZ-f6-quL" firstAttribute="leading" secondItem="u1g-MT-T7a" secondAttribute="leading" id="Tr8-N0-Z6b"/>
+                            <constraint firstItem="HqZ-f6-quL" firstAttribute="top" secondItem="u1g-MT-T7a" secondAttribute="top" id="Yts-0Y-Drw"/>
+                            <constraint firstItem="R1A-az-Afv" firstAttribute="leading" secondItem="u1g-MT-T7a" secondAttribute="leading" id="dMB-hw-9nR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Prode" id="BiW-30-Vhu"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="R1A-az-Afv" id="l7b-LD-y1s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zO5-Hh-s1L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="265"/>
+        </scene>
+        <!--Create Gambler View Controller-->
+        <scene sceneID="GzM-c0-dMb">
+            <objects>
+                <viewController storyboardIdentifier="CreateGamblerViewController" id="Poz-Re-Wgn" customClass="CreateGamblerViewController" customModule="ProdeGolf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MIu-WZ-7Sg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTA-Np-ZXt">
+                                <rect key="frame" x="320" y="71" width="61" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveGamblerTUI:" destination="Poz-Re-Wgn" eventType="touchUpInside" id="kaH-cL-RwY"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e2S-zR-dl3">
+                                <rect key="frame" x="12" y="129.33333333333337" width="369" height="239.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyw-sU-Y2q">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvD-YD-dZF">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="MbA-Dl-ul5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3m9-ce-K3E">
+                                                <rect key="frame" x="80" y="0.0" width="289" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFY-Nt-VY6">
+                                        <rect key="frame" x="0.0" y="34" width="369" height="34.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucket 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-fn-md4">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="coG-hN-JUA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCH-26-CU4">
+                                                <rect key="frame" x="80" y="0.0" width="289" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Tap to select wish pick"/>
+                                                <connections>
+                                                    <action selector="addGolferTUI:" destination="Poz-Re-Wgn" eventType="touchUpInside" id="ClA-pc-eLw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnY-wf-19S">
+                                        <rect key="frame" x="0.0" y="68.333333333333314" width="369" height="34.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucket 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wih-rN-rmB">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="RPI-OA-Kam"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nJ-rZ-2Pd">
+                                                <rect key="frame" x="80" y="0.0" width="289" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Tap to select wish pick"/>
+                                                <connections>
+                                                    <action selector="addGolferTUI:" destination="Poz-Re-Wgn" eventType="touchUpInside" id="cep-Iv-mRj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOB-gn-Rvk">
+                                        <rect key="frame" x="0.0" y="102.66666666666666" width="369" height="34.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucket 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDB-IK-hcu">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="d2z-j7-yuf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0m-X6-pV5">
+                                                <rect key="frame" x="80" y="0.0" width="289" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Tap to select wish pick"/>
+                                                <connections>
+                                                    <action selector="addGolferTUI:" destination="Poz-Re-Wgn" eventType="touchUpInside" id="2zm-g8-GWz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRe-FS-gds">
+                                        <rect key="frame" x="0.0" y="136.99999999999997" width="369" height="34.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucket 4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e4-Tz-IGF">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="ucq-xD-c3X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-oH-ksa">
+                                                <rect key="frame" x="80" y="0.0" width="289" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Tap to select wish pick"/>
+                                                <connections>
+                                                    <action selector="addGolferTUI:" destination="Poz-Re-Wgn" eventType="touchUpInside" id="Lr6-xZ-Ln2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myh-7z-ZdU">
+                                        <rect key="frame" x="0.0" y="171.33333333333334" width="369" height="34.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucket 5:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfH-g8-RRE">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="6qM-TM-axR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twj-Kw-Mco">
+                                                <rect key="frame" x="80" y="0.0" width="289" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Tap to select wish pick"/>
+                                                <connections>
+                                                    <action selector="addGolferTUI:" destination="Poz-Re-Wgn" eventType="touchUpInside" id="E8d-0e-KVt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTX-ok-lPi">
+                                        <rect key="frame" x="0.0" y="205.66666666666666" width="369" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draft positions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4V-HI-DAQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="qvm-LI-y1o"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-Qp-gnt">
+                                                <rect key="frame" x="120" y="0.0" width="249" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="20R-fH-5za"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e2S-zR-dl3" firstAttribute="leading" secondItem="20R-fH-5za" secondAttribute="leading" constant="12" id="Dzh-Cz-aeh"/>
+                            <constraint firstItem="20R-fH-5za" firstAttribute="trailing" secondItem="sTA-Np-ZXt" secondAttribute="trailing" constant="12" id="KYX-eT-hsE"/>
+                            <constraint firstItem="20R-fH-5za" firstAttribute="trailing" secondItem="e2S-zR-dl3" secondAttribute="trailing" constant="12" id="Q58-Hm-LZL"/>
+                            <constraint firstItem="sTA-Np-ZXt" firstAttribute="top" secondItem="20R-fH-5za" secondAttribute="top" constant="12" id="Q8H-hL-FPR"/>
+                            <constraint firstItem="e2S-zR-dl3" firstAttribute="top" secondItem="sTA-Np-ZXt" secondAttribute="bottom" constant="24" id="jGl-WC-NA6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bucket1Golfer" destination="YCH-26-CU4" id="gns-Bx-elp"/>
+                        <outlet property="bucket2Golfer" destination="7nJ-rZ-2Pd" id="FgR-dT-xCl"/>
+                        <outlet property="bucket3Golfer" destination="o0m-X6-pV5" id="BtT-ia-Rwn"/>
+                        <outlet property="bucket4Golfer" destination="O5H-oH-ksa" id="mkC-I1-QHG"/>
+                        <outlet property="bucket5Golfer" destination="twj-Kw-Mco" id="JWp-Kq-ErY"/>
+                        <outlet property="draftPositionsTextField" destination="IWg-Qp-gnt" id="LFO-2f-eda"/>
+                        <outlet property="nameTextField" destination="3m9-ce-K3E" id="cWg-sI-MXz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezz-4X-4x0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-830" y="1058"/>
+        </scene>
+        <!--Bucket Selection View Controller-->
+        <scene sceneID="mLL-Y4-43Z">
+            <objects>
+                <viewController storyboardIdentifier="BucketSelectionViewController" id="Ydy-Wb-wPe" customClass="BucketSelectionViewController" customModule="ProdeGolf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQx-aA-CgR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEt-bh-N8U">
+                                <rect key="frame" x="316" y="71" width="65" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="doneTUI:" destination="Ydy-Wb-wPe" eventType="touchUpInside" id="oAu-lp-Cdr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucket number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7w-tf-SfV">
+                                <rect key="frame" x="138.66666666666666" y="78" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-aZ-rMx">
+                                <rect key="frame" x="12" y="130" width="369" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GolferSelectionCell" id="aYX-6M-kay">
+                                        <rect key="frame" x="0.0" y="50" width="369" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aYX-6M-kay" id="V1I-om-yet">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ydy-Wb-wPe" id="5A8-v2-Ahe"/>
+                                    <outlet property="delegate" destination="Ydy-Wb-wPe" id="fHo-k9-QiX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bt4-J5-cb7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bt4-J5-cb7" firstAttribute="trailing" secondItem="IEt-bh-N8U" secondAttribute="trailing" constant="12" id="3ZU-Zu-Ra1"/>
+                            <constraint firstItem="bt4-J5-cb7" firstAttribute="bottom" secondItem="0m5-aZ-rMx" secondAttribute="bottom" id="IUQ-tB-FOj"/>
+                            <constraint firstItem="bt4-J5-cb7" firstAttribute="trailing" secondItem="0m5-aZ-rMx" secondAttribute="trailing" constant="12" id="QVF-qM-ZWM"/>
+                            <constraint firstItem="0m5-aZ-rMx" firstAttribute="leading" secondItem="bt4-J5-cb7" secondAttribute="leading" constant="12" id="e5d-RK-tXY"/>
+                            <constraint firstItem="0m5-aZ-rMx" firstAttribute="top" secondItem="IEt-bh-N8U" secondAttribute="bottom" constant="24" id="foN-Gy-oTL"/>
+                            <constraint firstItem="IEt-bh-N8U" firstAttribute="top" secondItem="bt4-J5-cb7" secondAttribute="top" constant="12" id="hR3-B9-kFe"/>
+                            <constraint firstItem="X7w-tf-SfV" firstAttribute="centerX" secondItem="bt4-J5-cb7" secondAttribute="centerX" id="mGw-vK-Kkw"/>
+                            <constraint firstItem="X7w-tf-SfV" firstAttribute="centerY" secondItem="IEt-bh-N8U" secondAttribute="centerY" id="pyf-s7-Pmg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bucketTitleLabel" destination="X7w-tf-SfV" id="nud-Ah-da5"/>
+                        <outlet property="tableView" destination="0m5-aZ-rMx" id="vlc-eg-Oxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ld-KD-mnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="1076"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eJU-Fk-zfb">
@@ -63,11 +440,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="N8w-dU-PH6"/>
+                        <segue destination="hoR-0k-nfd" kind="relationship" relationship="viewControllers" id="RBz-L9-bXy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrD-g6-1bZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="192" y="-476"/>
         </scene>
     </scenes>
     <resources>

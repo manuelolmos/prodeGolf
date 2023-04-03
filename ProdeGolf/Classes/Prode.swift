@@ -10,15 +10,13 @@ import Foundation
 class Prode: NSObject {
 
     var gamblers: [Gambler]
-    private let draft: [BucketSelection]
 
-    override init() {
-        let generator = DataGenerator()
-        gamblers = generator.generateGamblers()
-        draft = generator.generateDraft(gamblers: gamblers)
+    init(gamblers: [Gambler]) {
+        self.gamblers = gamblers
     }
 
     func process() {
+        let draft = DataGenerator().generateDraft(gamblers: gamblers)
         for (index, bucket) in draft.enumerated() {
             var golfersToPick = bucket.golfers
             for gambler in bucket.gamblers {
