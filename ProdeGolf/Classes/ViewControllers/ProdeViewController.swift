@@ -13,6 +13,7 @@ class ProdeViewController: UIViewController {
     @IBOutlet weak var draftButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     private var gamblers: [Gambler] = []
+    private var draftDone = false
 
     @IBAction func proceedToDraftTUI(_ sender: Any) {
         if gamblers.isEmpty {
@@ -20,8 +21,9 @@ class ProdeViewController: UIViewController {
         }
         let prode = Prode(gamblers: gamblers)
         prode.process()
-        draftButton.isEnabled = false
-        addButton.isEnabled = false
+        draftDone = true
+        draftButton.isEnabled = !draftDone
+        addButton.isEnabled = !draftDone
         tableView.reloadData()
     }
 
@@ -44,6 +46,17 @@ extension ProdeViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GamblerCell", for: indexPath)
         cell.textLabel?.text = gamblers[indexPath.row].name
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return !draftDone
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            gamblers.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
