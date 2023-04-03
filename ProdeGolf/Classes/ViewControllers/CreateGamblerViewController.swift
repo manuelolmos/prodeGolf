@@ -13,18 +13,18 @@ protocol CreateGamblerViewControllerDelegate: AnyObject {
 
 class CreateGamblerViewController: UIViewController {
 
-    private let defaultText = "Tap to select wish pick"
-
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var draftPositionsTextField: UITextField!
     @IBOutlet weak var bucket1Golfer: UIButton!
     @IBOutlet weak var bucket2Golfer: UIButton!
     @IBOutlet weak var bucket3Golfer: UIButton!
     @IBOutlet weak var bucket4Golfer: UIButton!
     @IBOutlet weak var bucket5Golfer: UIButton!
+    @IBOutlet weak var draftPositionsTextField: UITextField!
+
+    private let defaultText = "Tap to select wish pick"
+    private var picks = [[String]]()
 
     weak var delegate: CreateGamblerViewControllerDelegate?
-    private var picks = [[String]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,6 @@ class CreateGamblerViewController: UIViewController {
             vc.bucketNumber = sender.tag
             present(vc, animated: true)
         }
-
     }
 
     @IBAction func saveGamblerTUI(_ sender: Any) {

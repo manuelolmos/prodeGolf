@@ -7,9 +7,11 @@
 
 import UIKit
 
-class ProdeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProdeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var draftButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     private var gamblers: [Gambler] = []
 
     @IBAction func proceedToDraftTUI(_ sender: Any) {
@@ -18,6 +20,8 @@ class ProdeViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         let prode = Prode(gamblers: gamblers)
         prode.process()
+        draftButton.isEnabled = false
+        addButton.isEnabled = false
         tableView.reloadData()
     }
 
@@ -28,6 +32,9 @@ class ProdeViewController: UIViewController, UITableViewDataSource, UITableViewD
             present(vc, animated: true)
         }
     }
+}
+
+extension ProdeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gamblers.count
@@ -49,6 +56,7 @@ class ProdeViewController: UIViewController, UITableViewDataSource, UITableViewD
 }
 
 extension ProdeViewController: CreateGamblerViewControllerDelegate {
+
     func gamblerSaved(name: String, picks: [[String]], draftPositions: [Int]) {
         let gambler = Gambler(name: name, wishPicks: picks, draftPositions: draftPositions)
         gamblers.append(gambler)

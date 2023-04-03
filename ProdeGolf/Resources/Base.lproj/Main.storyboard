@@ -165,6 +165,8 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="C9D-1k-Ynm" id="srm-mz-Ut4"/>
+                        <outlet property="draftButton" destination="XWt-uC-cgK" id="zij-3e-O4Z"/>
                         <outlet property="tableView" destination="R1A-az-Afv" id="l7b-LD-y1s"/>
                     </connections>
                 </viewController>

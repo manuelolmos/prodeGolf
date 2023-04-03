@@ -11,7 +11,7 @@ protocol BucketSelectionViewControllerDelegate: AnyObject {
     func golfers(picks: [String], forBucket number: Int)
 }
 
-class BucketSelectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BucketSelectionViewController: UIViewController {
 
     weak var delegate: BucketSelectionViewControllerDelegate?
     var bucketNumber: Int = 0
@@ -32,6 +32,9 @@ class BucketSelectionViewController: UIViewController, UITableViewDataSource, UI
         golfers = DataGenerator().ranking[bucketNumber]
         tableView.reloadData()
     }
+}
+
+extension BucketSelectionViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return golfers.count
