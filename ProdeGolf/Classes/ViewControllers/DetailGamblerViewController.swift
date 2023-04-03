@@ -16,7 +16,11 @@ class DetailGamblerViewController: UIViewController {
         super.viewDidLoad()
 
         if let gambler = self.gambler {
-            gamblerLabel.text = "\(gambler.name) \nPicks: \(gambler.picks.joined(separator: ","))\nDraft positions: \(gambler.draftPositions)"
+            var wishPicksDescription = ""
+            for (index, value) in gambler.wishPicks.enumerated() {
+                wishPicksDescription.append("Bucket \(index) - \(value.joined(separator: ", "))\n")
+            }
+            gamblerLabel.text = "Name: \(gambler.name) \nPicks: \(gambler.picks.joined(separator: ", "))\nDraft positions: \(gambler.draftPositions)\nWish picks:\n\(wishPicksDescription)"
         }
     }
 }
