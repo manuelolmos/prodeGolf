@@ -55,6 +55,7 @@ class ProdeViewController: UIViewController {
         }
         let prode = Prode(gamblers: gamblers)
         prode.process()
+        gamblers = prode.gamblers
         draftDone = true
         setupViews()
     }
