@@ -67,12 +67,6 @@ class ProdeViewController: UIViewController {
             present(vc, animated: true)
         }
     }
-
-    @IBAction func showGamblerInfo(_ sender: Any) {
-        gamblers.forEach { gambler in
-            print("Gambler: \(gambler.name)\nDraft positions: \(gambler.draftPositions)\nWish picks: \(gambler.wishPicks)\n\n")
-        }
-    }
 }
 
 extension ProdeViewController: UITableViewDataSource, UITableViewDelegate {

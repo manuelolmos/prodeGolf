@@ -131,7 +131,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R1A-az-Afv">
-                                <rect key="frame" x="0.0" y="103" width="393" height="573"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GamblerCell" id="Ovc-hb-PAY">
@@ -148,41 +148,17 @@
                                     <outlet property="delegate" destination="hoR-0k-nfd" id="aeI-Se-0vw"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-he-ecP">
-                                <rect key="frame" x="0.0" y="676" width="393" height="44"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-yn-SuU">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Show gamblers info"/>
-                                        <connections>
-                                            <action selector="showGamblerInfo:" destination="hoR-0k-nfd" eventType="touchUpInside" id="SiP-FK-JJ9"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="sg3-yn-SuU" secondAttribute="bottom" id="IVS-nx-Acg"/>
-                                    <constraint firstAttribute="height" constant="44" id="Mck-DV-UXa"/>
-                                    <constraint firstItem="sg3-yn-SuU" firstAttribute="top" secondItem="A7f-he-ecP" secondAttribute="top" id="kqJ-yd-U99"/>
-                                    <constraint firstItem="sg3-yn-SuU" firstAttribute="leading" secondItem="A7f-he-ecP" secondAttribute="leading" id="oMw-Hj-ggG"/>
-                                    <constraint firstAttribute="trailing" secondItem="sg3-yn-SuU" secondAttribute="trailing" id="oWM-hu-Q3e"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1g-MT-T7a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A7f-he-ecP" firstAttribute="top" secondItem="R1A-az-Afv" secondAttribute="bottom" id="3HG-dI-Rr3"/>
                             <constraint firstItem="u1g-MT-T7a" firstAttribute="trailing" secondItem="R1A-az-Afv" secondAttribute="trailing" id="CuW-57-gAX"/>
                             <constraint firstItem="u1g-MT-T7a" firstAttribute="trailing" secondItem="HqZ-f6-quL" secondAttribute="trailing" id="NAf-Og-56X"/>
                             <constraint firstItem="R1A-az-Afv" firstAttribute="top" secondItem="HqZ-f6-quL" secondAttribute="bottom" id="SUs-gR-arj"/>
                             <constraint firstItem="HqZ-f6-quL" firstAttribute="leading" secondItem="u1g-MT-T7a" secondAttribute="leading" id="Tr8-N0-Z6b"/>
                             <constraint firstItem="HqZ-f6-quL" firstAttribute="top" secondItem="u1g-MT-T7a" secondAttribute="top" id="Yts-0Y-Drw"/>
-                            <constraint firstItem="A7f-he-ecP" firstAttribute="leading" secondItem="u1g-MT-T7a" secondAttribute="leading" id="cxZ-9L-QXd"/>
                             <constraint firstItem="R1A-az-Afv" firstAttribute="leading" secondItem="u1g-MT-T7a" secondAttribute="leading" id="dMB-hw-9nR"/>
-                            <constraint firstItem="u1g-MT-T7a" firstAttribute="trailing" secondItem="A7f-he-ecP" secondAttribute="trailing" id="iCD-26-sXh"/>
-                            <constraint firstItem="u1g-MT-T7a" firstAttribute="bottom" secondItem="A7f-he-ecP" secondAttribute="bottom" id="n6l-ZR-Mcd"/>
+                            <constraint firstItem="u1g-MT-T7a" firstAttribute="bottom" secondItem="R1A-az-Afv" secondAttribute="bottom" id="pX9-Cp-qd9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Prode" id="BiW-30-Vhu"/>
